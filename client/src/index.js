@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+//import App from './App';
 
 import Main from './components/Main';
 import Single from './components/Single';
@@ -9,13 +9,13 @@ import IndexGrid from './components/IndexGrid';
 
 import registerServiceWorker from './registerServiceWorker';
 
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 const router = (
   <BrowserRouter>
-    <Route path="/" component={Main}>
+    <Route exact path="/" component={Main}>
       <Route component={IndexGrid}></Route>
-      <Route path="/view/:postId"></Route>
+      <Route path="/view/:postId" component={Single}></Route>
     </Route>
   </BrowserRouter>
 )
