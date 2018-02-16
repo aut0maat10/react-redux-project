@@ -1,17 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all 
-    render json: @items.to_json
-    # q = params[:q]
-
-    # if q.blank?
-    #   render status: 400, json: { error: 'Expected parameter `q` '}
-    # else
-    #   render(
-    #     status: 200,
-    #     json: Item.where(["description LIKE ?", "%#{q}%"]).limit(100)
-    #   )
-    # end
+    render json: Item.all 
   end
 
   def new
@@ -22,6 +11,11 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     if @item.save
       render json: 'index' 
+    end
+  end 
+
+  def show
+    render json: Item.find(params[:id])
   end 
 
   private 
@@ -29,5 +23,5 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:name)
     end 
-  end 
+  
 end
