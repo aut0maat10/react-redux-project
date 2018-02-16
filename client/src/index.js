@@ -13,8 +13,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 const router = (
   <BrowserRouter>
-    <Route exact path="/" component={Main}>
-      <Route component={IndexGrid}></Route>
+    <Route path="/" component={Main}>
+      {/* <Route component={IndexGrid}></Route> */}
       <Route path="/view/:postId" component={Single}></Route>
     </Route>
   </BrowserRouter>
