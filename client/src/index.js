@@ -8,6 +8,8 @@ import promise from 'redux-promise';
 import createLogger from 'redux-logger';
 import allReducers from './reducers';
 import App from './components/App';
+//import { BrowserRouter, Route } from 'react-router-dom';
+//import routes from './routes'
 
 const logger = createLogger();
 const store = createStore(

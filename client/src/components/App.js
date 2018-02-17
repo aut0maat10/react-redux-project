@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import ItemsIndex from './ItemsIndex';
+import About from './About';
 
-class App extends Component{
+class App extends Component {
   render() {
     return (
-      <div>
-
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path='/' component={ItemsIndex} />
+          <Route exact path='/about' component={About} />
+        </div>
+      </Router>
     )
   }
 }
-
 export default App;
+
 
 // import React, { Component } from 'react';
 // import logo from './logo.svg';
