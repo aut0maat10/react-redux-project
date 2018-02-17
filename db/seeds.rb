@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-tele = Item.create(name: "Fender Teelcaster")
+tele = Item.create(name: "Fender Telecaster")
 sheraton = Item.create(name: "Epiphone Sheraton")
 les_paul = Item.create(name: "Gibson Les Paul")
 jag = Item.create(name: "Fender Jaguar")
