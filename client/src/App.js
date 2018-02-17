@@ -3,22 +3,22 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super(); 
-    this.state = {
-      items: []
-    }
-  }
-  componentDidMount() {
-    this.getItems()
-  }
+  // constructor() {
+  //   super(); 
+  //   this.state = {
+  //     items: []
+  //   }
+  // }
+  // componentDidMount() {
+  //   this.getItems()
+  // }
 
-  getItems() {
-    fetch('api/items')
-    .then(items => {
-      this.setState({items: items})
-    })
-  }
+  // getItems() {
+  //   fetch('/dummy-data/items')
+  //   .then(items => {
+  //     this.setState({items: items})
+  //   })
+  // }
   // componentDidMount() {
   //   window.fetch('api/items')
   //     .then(response => response.json)
