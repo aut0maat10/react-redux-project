@@ -26,9 +26,10 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <div className="navbarcheckbootstraplater">
+    <div className="container">
       <NavLink to="/" exact>Home</NavLink>
       <NavLink to="/about" exact>About</NavLink>
+      <NavLink to="/items/new" exact>Create</NavLink>
     </div>
   )
 }
