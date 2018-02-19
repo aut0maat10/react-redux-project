@@ -3,7 +3,7 @@ import {GET_ITEMS, GET_ITEM} from '../actions/types';
 
 const initialState = {
   all: [],
-  item: null
+  // item: null,
 };
 
 export default function itemsReducer(state = initialState, action) {
@@ -11,8 +11,8 @@ export default function itemsReducer(state = initialState, action) {
     case GET_ITEMS:
       return { ...state, all: action.payload.data  };
       //return Object.assign({}, state, {all: action.payload.data}) 
-    case GET_ITEM:
-      return { ...state, item: action.payload.data }; 
+    // case GET_ITEM:
+    //   return { ...state, item: action.payload.data }; 
       //return Object.assign({}, state, { item: action.payload.data })
     default:
       return state;

@@ -1,4 +1,4 @@
-import {GET_ITEMS, CREATE_ITEM, GET_ITEM } from './types';
+import {GET_ITEMS, CREATE_ITEM} from './types';
 import axios from 'axios';
 
 const API_URL = "http://localhost:3001/api/v1";
@@ -22,16 +22,16 @@ export function createItem(props) {
   };
 }
 
-export function getItem(id) {
-  return dispatch => {
-    axios.get(`${API_URL}/items/${id}`).then(data => {
-      dispatch({
-        type: GET_ITEM,
-        payload: data
-      });
-    });
-  }
-}
+// export function getItem(id) {
+//   return dispatch => {
+//     axios.get(`${API_URL}/items/${id}`).then(data => {
+//       dispatch({
+//         type: GET_ITEM,
+//         payload: data
+//       });
+//     });
+//   }
+// }
 
 // export function getItems() {
 //   axios.get(`${API_URL}/items`)
