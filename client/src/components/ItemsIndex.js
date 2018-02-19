@@ -1,36 +1,23 @@
 import React, { Component } from 'react'; 
 import { connect } from 'react-redux';
-//import { bindActionCreators } from 'redux'
 import { getItems } from '../actions/index';
-import { Link } from 'react-router-dom';
-//import * as actions from '../actions/types'
+import ItemsList from './ItemsList';
 
 class ItemsIndex extends Component {
   componentDidMount() {
     this.props.getItems();
   }
-  renderItems() {
-    return this.props.items.map((item) => {
-      return (
-        <li key={item.id}>
-          <Link to={"items/" + item.id}>
-            <h4>{item.name}</h4>
-          </Link>
-        </li>
-      )
-    });
-  }
+
+  // CUT HERE
+
   render() {
     return (
       <div className="container">
-        <div>
-          <h1>Index</h1>
-          <Link to="/items/new">Create</Link>
-        </div>
-
-          <ul className="list-group">
-            {this.renderItems()}
-          </ul>
+        <h1>Index</h1>
+        <ul className="list-group">
+          <ItemsList items={this.props.items} />
+          {this.props.children}
+        </ul>
       </div>
     ); 
   }
@@ -46,9 +33,5 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return { actions: bindActionCreators(actions, dispatch) }
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(ItemsIndex)
-export default connect(mapStateToProps, mapDispatchToProps)(ItemsIndex) //{ getItems: getItems }
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsIndex) 
 
