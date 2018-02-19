@@ -9,8 +9,6 @@ class ItemsIndex extends Component {
     this.props.getItems();
   }
 
-  // CUT HERE
-
   render() {
     return (
       <div className="container">

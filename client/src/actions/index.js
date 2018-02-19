@@ -1,4 +1,4 @@
-import {GET_ITEMS, CREATE_ITEM } from './types';
+import {GET_ITEMS, CREATE_ITEM, DELETE_ITEM } from './types';
 import axios from 'axios';
 
 const API_URL = "http://localhost:3001/api/v1";
@@ -18,6 +18,14 @@ export function createItem(props) {
   const request = axios.post(`${API_URL}/items`, props);
   return {
     type: CREATE_ITEM,
+    payload: request
+  };
+}
+
+export function deleteItem(id) {
+  const request = axios.delete(`${API_URL}/items/${id}`);
+  return {
+    type: DELETE_ITEM,
     payload: request
   };
 }
