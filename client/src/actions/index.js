@@ -1,14 +1,17 @@
-import {GET_ITEMS, CREATE_ITEM, GET_ITEM} from './types';
+import {GET_ITEMS, CREATE_ITEM } from './types';
 import axios from 'axios';
 
 const API_URL = "http://localhost:3001/api/v1";
 
 export function getItems() {
-  const request = axios.get(`${API_URL}/items`);
-    return {
-      type: GET_ITEMS,
-      payload: request
-    }; 
+  return dispatch => {
+    axios.get(`${API_URL}/items`).then(data => {
+      dispatch({
+        type: GET_ITEMS,
+        payload: data
+      });
+    });
+  }
 }
 
 export function createItem(props) {
@@ -18,3 +21,30 @@ export function createItem(props) {
     payload: request
   };
 }
+
+// export function getItems() {
+//   axios.get(`${API_URL}/items`)
+//     .then((response) => {
+//     console.log(response.data)
+//     return {
+//       type: GET_ITEMS,
+//       payload: response
+//     }
+//   })
+// }
+
+// export function getItems() {
+
+//   return function (dispatch) {
+//     dispatch({ type: 'LOADING_ITEMS' })
+//     return fetch(`${API_URL}/items`)
+//       .then(res => {
+//         return res.json()
+//       }).then(responseJson => {
+//         dispatch({ type: 'GET_ITEMS', payload: responseJson.items })
+//       })
+  
+//   }
+// }
+
+
