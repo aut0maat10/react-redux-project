@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import ItemsIndex from './ItemsIndex';
 import NewItem from './NewItem';
+import ItemShow from './ItemShow';
 import About from './About';
 
 class App extends Component {
@@ -11,8 +12,10 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
+          <Switch>
           <Route exact path='/' component={ItemsIndex} />
-          {/* <Route path='items/:id' component={ItemShow} /> */}
+          <Route path='/items/:itemId' component={ItemShow} />
+          </Switch>
           <Route exact path='/items/new' component={NewItem} />
           <Route exact path='/about' component={About} />
         </div>

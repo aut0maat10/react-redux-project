@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default (props) => {
 
-  const items = props.items.map((item) => 
+  const renderItems = props.items.map((item) => 
       <li key={item.id}>
         <Link to={`/items/${item.id}`}>
           <h4>{item.name}</h4>
@@ -15,7 +15,7 @@ export default (props) => {
     <div className="container">
       <div>
         <ul>
-          { items }
+          { renderItems }
         </ul>
       </div>
     </div>
