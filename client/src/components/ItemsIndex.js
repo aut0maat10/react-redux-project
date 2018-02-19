@@ -12,7 +12,7 @@ class ItemsIndex extends Component {
   renderItems() {
     return this.props.items.map((item) => {
       return (
-        <li key="item.id">
+        <li key={item.id}>
           <Link to={"items/" + item.id}>
             <h4>{item.name}</h4>
           </Link>
