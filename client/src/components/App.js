@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import ItemsIndex from './ItemsIndex';
 import NewItem from './NewItem';
+import ItemShow from './ItemShow';
 import About from './About';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
           <Navbar />
           <Route exact path='/' component={ItemsIndex} />
           <Route exact path='/items/new' component={NewItem} />
+          <Route exact path='items/:id' component={ItemShow} />
           <Route exact path='/about' component={About} />
         </div>
       </Router>
