@@ -5,6 +5,7 @@ import { createItem } from '../actions/index';
 export default class NewItem extends Component {
   submit = values => {
     createItem(values);
+    this.props.history.push('/forsale');
   }
   render() {
     return (
