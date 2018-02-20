@@ -9,7 +9,6 @@ export default class NewItem extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Create New Item</h1>
         <NewItemForm onSubmit={this.submit} />
       </div>
     )

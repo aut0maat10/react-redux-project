@@ -1,6 +1,6 @@
 import React from 'react';
 //import { NavLink } from 'react-router-dom';
-import { Nav, NavItem } from 'react-bootstrap';
+import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 
 // const link = {
@@ -17,21 +17,40 @@ import { Nav, NavItem } from 'react-bootstrap';
 //   alert(`selected ${selectedKey}`);
 // }
 
+// const NavBar = () => {
+//   return (
+//     <div className="container">
+//     <Nav bsStyle="pills" activeKey={1} >
+//       <NavItem eventKey={1} href="/">
+//         Home
+//     </NavItem>
+//       <NavItem eventKey={1} href="/about">
+//         About
+//     </NavItem>
+//       <NavItem eventKey={1} href="/items/new">
+//         Create
+//     </NavItem>
+//     </Nav>
+//     </div>
+//   )
+// }
 const NavBar = () => {
   return (
-    <div className="container">
-    <Nav bsStyle="pills" activeKey={1} >
-      <NavItem eventKey={1} href="/">
-        Home
-    </NavItem>
-      <NavItem eventKey={1} href="/about">
-        About
-    </NavItem>
-      <NavItem eventKey={1} href="/items/new">
-        Create
-    </NavItem>
-    </Nav>
-    </div>
+    <Navbar inverse>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="/">Home</a>
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav>
+        <NavItem eventKey={1} href="/items/new">
+          Create
+        </NavItem>
+        <NavItem eventKey={2} href="/about">
+          About
+        </NavItem>
+      </Nav>
+    </Navbar>
   )
 }
 

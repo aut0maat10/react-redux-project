@@ -6,18 +6,19 @@ let NewItemForm = props => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>New Item</label>
+        <h1>Create New Item</h1><br /> 
+        {/* <label>Item</label> */}
         <div>
           <Field
             name="name"
             component="input"
             type="text"
-            placeholder="New Item"
+            placeholder="Title"
           />
-        </div>
+        </div><br />
       </div>
       <div>
-        <label>Description</label>
+        {/* <label>Description</label> */}
         <div>
           <Field
             name="description"
@@ -26,7 +27,7 @@ let NewItemForm = props => {
             placeholder="Description"
           />
         </div>
-      </div>
+      </div><br />
       <div>
         <button type="submit" disabled={pristine || submitting}>
           Submit
