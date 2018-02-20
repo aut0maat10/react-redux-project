@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 const ItemShow = ({ item }) => 
     <div className="container">
       <h3>{ item.name }</h3>
+      <p>{item.description}</p>
     </div>
   
 
 const mapStateToProps = (state, ownProps) => {
-  
+
   const item = state.items.all.find(item => item.id === 
     +ownProps.match.params.itemId)
   
@@ -18,6 +19,14 @@ const mapStateToProps = (state, ownProps) => {
     return { item: {} }
   }
 }
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     handleOnClick: (id) => {
+//       dispatch(deleteItem(id))
+//     }
+//   }
+// }
 
 
 export default connect(mapStateToProps)(ItemShow)

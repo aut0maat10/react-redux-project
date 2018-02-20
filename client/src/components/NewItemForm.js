@@ -17,6 +17,17 @@ let NewItemForm = props => {
         </div>
       </div>
       <div>
+        <label>Description</label>
+        <div>
+          <Field
+            name="description"
+            component="textarea"
+            type="text"
+            placeholder="Description"
+          />
+        </div>
+      </div>
+      <div>
         <button type="submit" disabled={pristine || submitting}>
           Submit
         </button>

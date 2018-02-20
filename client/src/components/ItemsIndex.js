@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getItems } from '../actions/index';
 import ItemsList from './ItemsList';
-//import ItemShow from './ItemShow';
+// import ItemShow from './ItemShow';
 
 class ItemsIndex extends Component {
   componentDidMount() {
@@ -16,9 +16,9 @@ class ItemsIndex extends Component {
         <div>
           <ul className="list-group">
             <ItemsList items={this.props.items} />
-            {this.props.children}
           </ul>
         </div>
+        {/* <div>{this.props.children}</div> */}
       </div>
     ); 
   }

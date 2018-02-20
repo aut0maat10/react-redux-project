@@ -17,15 +17,3 @@ export default function itemsReducer(state = initialState, action) {
       return state;
   }
 }
-
-// export default function itemsReducer(state = { loading: false, items: [] }, action) {
-//   switch (action.type) {
-//     case 'LOADING_ITEMS':
-//       return Object.assign({}, state, { loading: true })
-//     case GET_ITEMS:
-//       return { loading: false, items: action.payload }
-//     default:
-//       return state;
-//   }
-
-// }
