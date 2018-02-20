@@ -1,13 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-const ItemShow = ({ item }) => 
+//import {deleteItem} from '../actions/index';
+ 
+const ItemShow = ({ item }) => {
+  return (
     <div className="container">
-      <h3>{ item.name }</h3>
+      <h3>{item.name}</h3>
       <p>{item.description}</p>
     </div>
-  
-
+  )
+}
+    
 const mapStateToProps = (state, ownProps) => {
 
   const item = state.items.all.find(item => item.id === 

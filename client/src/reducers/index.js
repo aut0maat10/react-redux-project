@@ -1,4 +1,3 @@
-
 import { combineReducers } from 'redux';
 import itemsReducer from './itemsReducer';
 import { reducer as formReducer } from 'redux-form';
