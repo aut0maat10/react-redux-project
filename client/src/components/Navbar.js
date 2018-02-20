@@ -1,6 +1,6 @@
 import React from 'react';
 //import { NavLink } from 'react-router-dom';
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 
 // const link = {

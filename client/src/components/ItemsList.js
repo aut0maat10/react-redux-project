@@ -7,7 +7,7 @@ export default (props) => {
 
     <li key={item.id}>
       <Link to={`/items/${item.id}`}>
-        <h4>{item.name}</h4>
+        <h4>{item.name} ({item.price})</h4>
       </Link>
     </li>
   );
