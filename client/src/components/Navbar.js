@@ -43,11 +43,11 @@ const NavBar = () => {
         </Navbar.Brand>
       </Navbar.Header>
       <Nav>
+        <NavItem eventKey={2} href="/forsale">
+          For Sale
+        </NavItem>
         <NavItem eventKey={1} href="/items/new">
           Create
-        </NavItem>
-        <NavItem eventKey={2} href="/about">
-          About
         </NavItem>
       </Nav>
     </Navbar>
