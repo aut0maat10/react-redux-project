@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 //import {deleteItem} from '../actions/index';
- 
+
+
+
 const ItemShow = ({ item }) => {
   return (
     <div className="container">

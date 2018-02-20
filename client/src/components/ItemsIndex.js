@@ -6,7 +6,7 @@ import ItemsList from './ItemsList';
 
 class ItemsIndex extends Component {
   componentDidMount() {
-    this.props.getItems();
+      this.props.getItems();
   }
 
   render() {
