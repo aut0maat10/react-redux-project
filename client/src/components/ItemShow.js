@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//import {deleteItem} from '../actions/index';
  
 const ItemShow = ({ item }) => {
   
@@ -25,14 +24,5 @@ const mapStateToProps = (state, ownProps) => {
     return { item: {} }
   }
 }
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     handleOnClick: (id) => {
-//       dispatch(deleteItem(id))
-//     }
-//   }
-// }
-
 
 export default connect(mapStateToProps)(ItemShow)
