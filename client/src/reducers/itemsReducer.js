@@ -1,5 +1,5 @@
 
-import { GET_ITEMS } from '../actions/types';
+import { GET_ITEMS, CREATE_ITEM } from '../actions/types';
 
 const initialState = {
   all: [],
@@ -9,6 +9,8 @@ export default function itemsReducer(state = initialState, action) {
   switch (action.type) {
     case GET_ITEMS:
       return Object.assign({}, state, {all: action.payload.data}) 
+    case CREATE_ITEM:
+      return Object.assign({}, state, {all: action.payload.data} )
     default:
       return state;
   }
