@@ -1,4 +1,3 @@
-
 import { GET_ITEMS, CREATE_ITEM } from '../actions/types';
 
 const initialState = {
