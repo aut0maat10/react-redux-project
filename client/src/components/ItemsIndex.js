@@ -19,7 +19,6 @@ class ItemsIndex extends Component {
             <ItemsList items={this.props.items} />
           </ul>
         </div>
-        {/* <div>{this.props.children}</div> */}
       </div>
     ); 
   }
@@ -29,15 +28,11 @@ function mapStateToProps(state) {
   return { items: state.items.all }
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return { actions: bindActionCreators(actions,dispatch)}
-// }
-
 function mapDispatchToProps(dispatch) {
   return {
     getItems: () => dispatch(getItems())
   }
 }
-//export default connect(mapStateToProps, mapDispatchToProps)(ItemsIndex)
+
 export default connect(mapStateToProps, mapDispatchToProps)(ItemsIndex) 
 

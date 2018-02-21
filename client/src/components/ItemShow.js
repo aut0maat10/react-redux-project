@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+<<<<<<< HEAD
+=======
+import Item from './Item';
+>>>>>>> refactoring
  
-const ItemShow = ({ item }) => {
-  
-  return (
-    <div className="container">
-      <h3>{item.name}</h3>
-      <h4><strong>Price:</strong> {item.price}</h4>
-      <p><strong>Description:</strong> {item.description}</p>
-      <p><strong>Seller:</strong> {item.seller_name}</p>
-      <p><strong>Phone:</strong> {item.seller_phone}</p>
-    </div>
-  )
+class ItemShow extends Component {
+
+  render() {
+    return (
+      <div class="container">
+        <Item item={this.props.item}/>
+      </div>
+    )
+  }
 }
     
 const mapStateToProps = (state, ownProps) => {
@@ -25,7 +27,11 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
+<<<<<<< HEAD
 export default connect(mapStateToProps)(ItemShow)
 
 
 
+=======
+export default connect(mapStateToProps)(ItemShow)
+>>>>>>> refactoring
