@@ -15,7 +15,7 @@ export function getItems() {
   }
 }
 
-// create item
+// create item - Redux form 
 export function createItem(props) {
   console.log('in createItem()')
   debugger
