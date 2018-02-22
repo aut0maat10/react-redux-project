@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-<<<<<<< HEAD
-=======
 import Item from './Item';
->>>>>>> refactoring
  
 class ItemShow extends Component {
 
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <Item item={this.props.item}/>
       </div>
     )
@@ -27,11 +24,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-<<<<<<< HEAD
 export default connect(mapStateToProps)(ItemShow)
 
 
 
-=======
-export default connect(mapStateToProps)(ItemShow)
->>>>>>> refactoring
