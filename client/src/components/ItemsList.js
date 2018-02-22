@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LikeButton from './LikeButton';
 
 export default (props) => {
 
@@ -9,6 +10,7 @@ export default (props) => {
       <Link to={`/items/${item.id}`}>
         <h4>{item.name} ({item.price})</h4>
       </Link>
+      <LikeButton />
     </li>
   );
 
