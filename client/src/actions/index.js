@@ -18,7 +18,7 @@ export function getItems() {
 // create item - Redux form 
 export function createItem(props) {
   console.log('in createItem()')
-  debugger
+  //debugger
   const request = axios.post(`${API_URL}/items`, props);
   return {
     type: CREATE_ITEM,

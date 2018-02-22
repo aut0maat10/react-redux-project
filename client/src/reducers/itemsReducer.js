@@ -9,6 +9,7 @@ export default function itemsReducer(state = initialState, action) {
     case GET_ITEMS:
       return Object.assign({}, state, {all: action.payload.data}) 
     case CREATE_ITEM:
+      debugger
       return Object.assign({}, state, {all: action.payload.data} )
     default:
       return state;

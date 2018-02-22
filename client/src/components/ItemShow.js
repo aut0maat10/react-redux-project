@@ -6,7 +6,7 @@ class ItemShow extends Component {
 
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <Item item={this.props.item}/>
       </div>
     )
