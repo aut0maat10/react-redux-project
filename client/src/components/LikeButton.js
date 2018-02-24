@@ -1,24 +1,29 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addLike } from '../actions/index'
+//import { ADD_LIKE } from '../actions/types' 
 
-export default class LikeButton extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      likes: 0,
-    };
-  }
+class LikeButton extends React.Component {
 
   handleClick = () => {
-    this.setState ({
-      likes: this.state.likes + 1,
-    })
+    //debugger
+    this.props.dispatch(addLike(0))
+    // this.props.dispatch({
+    //   type: ADD_LIKE,
+    // });
   }
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>&hearts; {this.state.likes}</button>
+        <button onClick={this.handleClick}>&hearts; {this.props.likes}</button>
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  //debugger
+  return { likes: state.likes }
+}
+
+export default connect(mapStateToProps)(LikeButton)

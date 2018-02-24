@@ -1,4 +1,4 @@
-import { GET_ITEMS, CREATE_ITEM } from './types';
+import { GET_ITEMS, CREATE_ITEM, ADD_LIKE } from './types';
 import axios from 'axios';
 
 const API_URL = "http://localhost:3001/api/v1";
@@ -24,6 +24,14 @@ export function createItem(props) {
     type: CREATE_ITEM,
     payload: request
   };
+}
+
+// add like
+export function addLike(index) {
+  return {
+    type: ADD_LIKE,
+    index
+  }
 }
 
 
