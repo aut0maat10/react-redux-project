@@ -1,7 +1,7 @@
 import { GET_ITEMS, CREATE_ITEM, ADD_LIKE } from '../actions/types';
 
 const initialState = {
-  all: [{likes: 0}],
+  all: [],
 };
 
 export default function itemsReducer(state = initialState, action) {

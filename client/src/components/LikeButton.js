@@ -7,7 +7,7 @@ class LikeButton extends React.Component {
 
   handleClick = () => {
     //debugger
-    this.props.dispatch(addLike(0))
+    this.props.store.dispatch(addLike(0))
     // this.props.dispatch({
     //   type: ADD_LIKE,
     // });
@@ -15,7 +15,7 @@ class LikeButton extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>&hearts; {this.props.likes}</button>
+        <button onClick={this.props.handleClick}>&hearts; {this.props.likes}</button>
       </div>
     );
   }
