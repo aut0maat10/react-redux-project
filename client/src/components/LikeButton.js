@@ -17,7 +17,7 @@ export default class LikeButton extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Like</button> {`${this.state.likes} likes`}
+        <button onClick={this.handleClick}>&hearts; {this.state.likes}</button>
       </div>
     );
   }
