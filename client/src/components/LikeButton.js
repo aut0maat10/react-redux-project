@@ -4,18 +4,18 @@ import { addLike } from '../actions/index'
 //import { ADD_LIKE } from '../actions/types' 
 
 class LikeButton extends React.Component {
-
   handleClick = () => {
-    //debugger
-    this.props.store.dispatch(addLike(0))
-    // this.props.dispatch({
-    //   type: ADD_LIKE,
-    // });
+  
+  // this.props.items.map(item => {
+  //   item.id === 
+  // })
+  
+  this.props.addLike(this.props.items.id)
   }
   render() {
     return (
       <div>
-        <button onClick={this.props.handleClick}>&hearts; {this.props.likes}</button>
+        <button onClick={this.handleClick}>&hearts; {this.props.items.likes}</button>
       </div>
     );
   }
@@ -23,7 +23,14 @@ class LikeButton extends React.Component {
 
 const mapStateToProps = (state) => {
   //debugger
-  return { likes: state.likes }
+  return { items: state.items.all }
 }
 
-export default connect(mapStateToProps)(LikeButton)
+function mapDispatchToProps(dispatch) {
+  return {
+    addLike: addLike
+    // addLike: () => dispatch(addLike())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LikeButton)

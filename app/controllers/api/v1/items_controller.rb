@@ -2,7 +2,7 @@ module Api
   module V1
     class ItemsController < ApplicationController
       
-      before_action :set_article, only: [:show, :destroy]
+      before_action :set_item, only: [:show, :update, :destroy]
 
       def index
         render json: Item.all 
@@ -25,6 +25,10 @@ module Api
         render json: Item.find(params[:id])
       end 
 
+      def update
+        @item.update(likes: params[:likes])
+      end 
+
       def destroy
         @item.destroy
         render :show, status: :ok
@@ -32,12 +36,12 @@ module Api
 
       private 
       
-      def set_article
-        @article = Article.find(params[:id])
+      def set_item
+        @item = Item.find(params[:id])
       end 
 
       def item_params
-        params.require(:item).permit(:name, :description, :price, :seller_name, :seller_phone)
+        params.require(:item).permit(:name, :description, :price, :seller_name, :seller_phone, :likes)
       end 
 
     end

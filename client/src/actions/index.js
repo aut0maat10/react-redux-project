@@ -26,11 +26,16 @@ export function createItem(props) {
   };
 }
 
+
 // add like
-export function addLike(index) {
-  return {
-    type: ADD_LIKE,
-    index
+export function addLike(item) {
+  return dispatch => {
+    axios.patch(`${API_URL}/items/${item.id}`).then(data => {
+      dispatch({
+        type: ADD_LIKE,
+        payload: data
+      })
+    })
   }
 }
 
