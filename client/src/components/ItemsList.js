@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import LikeButton from './LikeButton';
 
 export default (props) => {
-  //debugger
   const renderItems = props.items.map((item) => 
   
     <li key={item.id}>

@@ -25,7 +25,7 @@ module Api
         render json: Item.find(params[:id])
       end 
 
-      def update
+      def update 
         @item.update(likes: params[:likes])
       end 
 

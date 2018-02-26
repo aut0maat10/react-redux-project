@@ -1,4 +1,5 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addLike } from '../actions/index'
 //import { ADD_LIKE } from '../actions/types' 
@@ -6,9 +7,8 @@ import { addLike } from '../actions/index'
 class LikeButton extends React.Component {
   
   handleOnClick = () => {
-    //debugger
-    console.log(this.props.item.id)
-    this.props.addLike(this.props.item.id)
+    console.log(this.props.item)
+    this.props.addLike(this.props.item)
   }
   render() {
     return (
@@ -25,10 +25,10 @@ const mapStateToProps = (state) => {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
+  return bindActionCreators({
     addLike: addLike
     //addLike: () => dispatch(addLike())
-  }
+  }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LikeButton)

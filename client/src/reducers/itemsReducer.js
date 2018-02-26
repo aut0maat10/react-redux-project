@@ -12,18 +12,14 @@ export default function itemsReducer(state = initialState, action) {
       return Object.assign({}, state, {all: action.payload.data} )
     case ADD_LIKE:
       console.log("incrementing likes!")
-      // return the updated state
 
+      const index = state.all.findIndex(item => item.id === action.payload.id);
       //debugger
-      //item = 
-      //const items = state.items.all.map
-  
-      // const index = action.index;
-      // return [
-      //   ...state.slice(0, index),
-      //   {...state[index], likes: state[index].likes + 1},
-      //   ...state.slice(index + 1),
-      // ];
+      return [
+        ...state.all.slice(0, index),
+        {...state.all[index], likes: state.all[index].likes + 1},
+        ...state.all.slice(index + 1),
+      ];
   
     default:
       return state;
