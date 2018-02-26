@@ -5,12 +5,12 @@ import LikeButton from './LikeButton';
 export default (props) => {
   //debugger
   const renderItems = props.items.map((item) => 
-
+  
     <li key={item.id}>
       <Link to={`/items/${item.id}`}>
         <h4>{item.name} ({item.price})</h4>
       </Link>
-      <LikeButton item={item} price={item.price}/>
+      <LikeButton item={item}/>
     </li>
   );
 

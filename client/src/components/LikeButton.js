@@ -4,32 +4,30 @@ import { addLike } from '../actions/index'
 //import { ADD_LIKE } from '../actions/types' 
 
 class LikeButton extends React.Component {
-  handleClick = () => {
   
-  // this.props.items.map(item => {
-  //   item.id === 
-  // })
-  
-  this.props.addLike(this.props.items.id)
+  handleOnClick = () => {
+    //debugger
+    console.log(this.props.item.id)
+    this.props.addLike(this.props.item.id)
   }
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>&hearts; {this.props.items.likes}</button>
+        <button onClick={this.handleOnClick}>&hearts; {this.props.item.likes}</button>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  //debugger
+
   return { items: state.items.all }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     addLike: addLike
-    // addLike: () => dispatch(addLike())
+    //addLike: () => dispatch(addLike())
   }
 }
 

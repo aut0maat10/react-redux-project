@@ -28,13 +28,16 @@ export function createItem(props) {
 
 
 // add like
-export function addLike(item) {
+export function addLike(id) {
+  console.log("in action creator")
+  //console.log(id)
   return dispatch => {
-    axios.patch(`${API_URL}/items/${item.id}`).then(data => {
+    axios.patch(`${API_URL}/items/${id}`).then(data => {
+      console.log(data)
       dispatch({
         type: ADD_LIKE,
         payload: data
-      })
+      }) 
     })
   }
 }
