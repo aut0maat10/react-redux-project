@@ -1,4 +1,4 @@
-import { GET_ITEMS, CREATE_ITEM, ADD_LIKE, LIKE_PERSISTENCE_SUCCESS } from './types';
+import { GET_ITEMS, CREATE_ITEM } from './types';
 import axios from 'axios';
 
 const API_URL = "http://localhost:3001/api/v1";
@@ -16,6 +16,22 @@ export function getItems() {
 }
 
 // create item - Redux form 
+
+// export function createItem(values) {
+//   console.log(values)
+//   return dispatch => {
+//     console.log("in dispatch")
+//     //dispatch({ type: CREATE_ITEM, payload: item });
+//     axios.post(`${API_URL}/items`, values).then(data => {
+//       dispatch({
+//         type: CREATE_ITEM,
+//         payload: data
+//       });
+//     });
+//   }
+// }
+
+
 export function createItem(props) {
   console.log('in createItem()')
   //debugger
@@ -25,8 +41,6 @@ export function createItem(props) {
     payload: request
   };
 }
-
-
 
 
 
