@@ -29,15 +29,16 @@ export function createItem(props) {
 
 // add like
 export function addLike(item) {
-  // console.log("in action creator")
-  // console.log(item)
+  console.log("in action creator")
+  console.log(item)
   return dispatch => {
-    axios.patch(`${API_URL}/items/${item.id}`).then(data => {
+    dispatch({type: ADD_LIKE, payload: item});
+    axios.patch(`${API_URL}/items/${item.id}`, item).then(data => {
       dispatch({
-        type: ADD_LIKE,
+        type: 'LIKE_PERSISTENCE_SUCCESS',
         payload: item
       }) 
-    })
+    }).catch((error) => {type: 'LIKE_PERSISTENCE_FAILED', error})
   }
 }
 

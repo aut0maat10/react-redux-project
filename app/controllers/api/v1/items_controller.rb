@@ -25,8 +25,9 @@ module Api
         render json: Item.find(params[:id])
       end 
 
-      def update 
-        @item.update(likes: params[:likes])
+      def update
+        @item.update_attributes(likes: @item.likes + 1)
+        render json: @item 
       end 
 
       def destroy
@@ -41,7 +42,7 @@ module Api
       end 
 
       def item_params
-        params.require(:item).permit(:name, :description, :price, :seller_name, :seller_phone, :likes)
+        params.require(:item).permit(:id, :name, :description, :price, :seller_name, :seller_phone, :likes)
       end 
 
     end
