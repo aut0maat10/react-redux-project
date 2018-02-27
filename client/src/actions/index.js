@@ -1,4 +1,4 @@
-import { GET_ITEMS, CREATE_ITEM, ADD_LIKE } from './types';
+import { GET_ITEMS, CREATE_ITEM, ADD_LIKE, LIKE_PERSISTENCE_SUCCESS } from './types';
 import axios from 'axios';
 
 const API_URL = "http://localhost:3001/api/v1";
@@ -29,16 +29,14 @@ export function createItem(props) {
 
 // add like
 export function addLike(item) {
-  console.log("in action creator")
-  console.log(item)
   return dispatch => {
     dispatch({type: ADD_LIKE, payload: item});
     axios.patch(`${API_URL}/items/${item.id}`, item).then(data => {
       dispatch({
-        type: 'LIKE_PERSISTENCE_SUCCESS',
+        type: LIKE_PERSISTENCE_SUCCESS,
         payload: item
       }) 
-    }).catch((error) => {type: 'LIKE_PERSISTENCE_FAILED', error})
+    })//.catch((error) => {type: LIKE_PERSISTENCE_FAILED, error})
   }
 }
 

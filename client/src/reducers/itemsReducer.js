@@ -11,11 +11,7 @@ export default function itemsReducer(state = initialState, action) {
     case CREATE_ITEM:
       return Object.assign({}, state, {all: action.payload.data} )
     case ADD_LIKE:
-      console.log("incrementing likes!")
-      console.log(action.payload)
-
       const index = state.all.findIndex(item => item.id === action.payload.id);
-      //debugger
       return {
         all: [
           ...state.all.slice(0, index),
@@ -28,4 +24,3 @@ export default function itemsReducer(state = initialState, action) {
   }
 }
 
-// state.all.filter(item => item.id === 29) returns hard-coded item object

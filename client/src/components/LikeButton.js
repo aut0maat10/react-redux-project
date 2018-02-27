@@ -27,7 +27,6 @@ const mapStateToProps = (state) => {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     addLike: addLike
-    //addLike: () => dispatch(addLike())
   }, dispatch);
 }
 
