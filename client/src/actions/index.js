@@ -17,13 +17,14 @@ export function getItems() {
 
 // create item - Redux form 
 export function createItem(props) {
-  console.log('in createItem()')
-  //debugger
-  const request = axios.post(`${API_URL}/items`, props);
-  return {
-    type: CREATE_ITEM,
-    payload: request
-  };
+  return dispatch => {
+    axios.post(`${API_URL}/items`, props).then(data => {
+      dispatch({
+        type: CREATE_ITEM,
+        payload: data
+      })
+    })
+  } 
 }
 
 

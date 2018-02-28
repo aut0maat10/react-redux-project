@@ -9,7 +9,12 @@ export default function itemsReducer(state = initialState, action) {
     case GET_ITEMS:
       return Object.assign({}, state, {all: action.payload.data}) 
     case CREATE_ITEM:
-      return Object.assign({}, state, {all: action.payload.data} )
+      //debugger
+      return {
+        all: [
+          ...state.all, action.payload.data
+        ]
+      }
     case ADD_LIKE:
       const index = state.all.findIndex(item => item.id === action.payload.id);
       return {

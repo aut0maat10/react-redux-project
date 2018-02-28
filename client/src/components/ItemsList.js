@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import LikeButton from './LikeButton';
 
 export default (props) => {
+
+  const sortedItems = props.items.sort(function(a, b) {
+    return b.likes - a.likes;
+  })
   //debugger
-  const renderItems = props.items.map((item) => 
+  const renderItems = sortedItems.map((item) => 
   
     <li key={item.id}>
       <Link to={`/items/${item.id}`}>
