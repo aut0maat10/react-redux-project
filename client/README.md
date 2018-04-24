@@ -1,3 +1,12 @@
+## This is ReduxReverb, my final project for Flatiron School. 
+
+ReduxReverb is a marketplace app where a user can add instruments for sale. Items are added through a Redux form and persisted to the database with a Ruby on Rails API. Data is fetched with Redux actions and displayed with ReactJS. Basic styling with Bootstrap.
+
+This is a first version 1.0. More functionality will be added soon.
+
+Blog post about the project: http://electricsauna.net/final_project_react-redux_app_with_rails_api
+ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
