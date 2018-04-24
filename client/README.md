@@ -4,7 +4,7 @@ ReduxReverb is a marketplace app where a user can add instruments for sale. Item
 
 This is a first version 1.0. More functionality will be added soon.
 
-Blog post about the project: http://electricsauna.net/final_project_react-redux_app_with_rails_api
+Blog post about the project here: http://electricsauna.net/final_project_react-redux_app_with_rails_api
  
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
