@@ -7,7 +7,9 @@ export default (props) => {
 
     <li key={item.id}>
       <Link to={`/items/${item.id}`}>
+        <div className="list-card">
         <h4>{item.name} ({item.price})</h4>
+        </div>
       </Link>
     </li>
   );
@@ -15,7 +17,7 @@ export default (props) => {
   return (
     <div className="container">
       <div>
-        <ul>
+        <ul className="item">
           { renderItems }
         </ul>
       </div>

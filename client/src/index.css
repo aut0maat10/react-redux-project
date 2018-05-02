@@ -8,3 +8,11 @@ body {
   border: 1px solid #ccc;
   padding: 16px; 
 }
+
+.list-card {
+  border: 1px solid #ccc;
+}
+
+.item {
+  list-style: none;
+}
