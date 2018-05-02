@@ -8,7 +8,7 @@ export default (props) => {
     <li key={item.id}>
       <Link to={`/items/${item.id}`}>
         <div className="list-card">
-        <h4>{item.name} ({item.price})</h4>
+        <h4 id="item-index">{item.name} ({item.price})</h4>
         </div>
       </Link>
     </li>

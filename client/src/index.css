@@ -11,8 +11,13 @@ body {
 
 .list-card {
   border: 1px solid #ccc;
+  margin-bottom: 16px; 
 }
 
 .item {
   list-style: none;
+}
+
+#item-index {
+  padding: 16px;;
 }
